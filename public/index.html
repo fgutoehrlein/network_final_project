@@ -4,10 +4,16 @@
   <meta charset="utf-8">
   <title>ToDo</title>
   <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/frontend.css">
   <script src="/socket.io/socket.io.js"></script>
   <script src="http://code.angularjs.org/angular-1.0.0.min.js"></script>
-  <style>
-  <!-- Latest compiled and minified bootstrap CSS -->
+  <style>  
+    .done-true {
+      text-decoration: line-through;
+      color: grey;
+    }
+  </style>
+    <!-- Latest compiled and minified bootstrap CSS -->
   <link rel="/css/bootstrap.min.css">
 
   <!-- jQuery library -->
@@ -18,21 +24,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-    .done-true {
-      text-decoration: line-through;
-      color: grey;
-    }
-  </style>
   <script src="/js/controllers.js"></script>
 </head>
 <body>
 <div class="container">
   <div ng-app>
+  <div class="row">
+    <div class="col-sm-4"></div>
   <div class="col-sm-4">
-    <h2>Todo</h2>
+    <h2>The Todo List</h2>
   </div>
-  <div class="col-sm-4">
+    <div class="col-sm-4"></div>
+  </div>
+  <div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4" id="liste">
     <div ng-controller="TodoCtrl">
       <span>{{remaining()}} of {{todos.length}} remaining</span>
       [ <a href="" ng-click="archive()">archive done objects...</a> ]
@@ -49,12 +55,8 @@
       </form>
     </div>
   </div>
+  <div class="col-sm-4"></div>
   </div>
 </div>
- <div class="row">
-  <div class="col-sm-4">.col-sm-4</div>
-  <div class="col-sm-8">.col-sm-8</div>
-</div> 
-
 </body>
 </html>
